@@ -1,18 +1,37 @@
-import Image from "next/image"
+import Image from 'next/image';
 
-function Board() {
+ function Board() {
   return (
-    <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-        src = "/carMotor.gif"
-        alt="carmoto"
-        width={350}
+    <div className='flex flex-col items-center justify-center p-5 rounded-b-2x' style={{ minHeight: '400px' }}>
+   
+   <div className="mb-4 w-96 h-64">
+     
+      <Image
+        src="/carMotor.gif"
+        alt="rideme"
+        width={370}
         height={200}
-        priority
-        />
-
+        className=" pd-10 md:pb=0 object-contain"
+      />
     </div>
-  )
-}
+    
+    <div>
+        <form className='flex items-center space-x-5 rounded-md p-2 shadow-md
+        flex-1 md:flex-initial bg-blue-400 hover:bg-blue-500 active:bg-blue-300  transition-transform transform 
+        hover:translate-y-0 active:translate-y-1 focus:outline-none focus:ring-2
+         focus:ring-blue-300'>
+        <button  type='submit'  className='text-white font-bold font-sans'>Start your journey</button>
+        </form>
+    </div>
+      
+        
 
-export default Board
+
+    
+   
+  </div>
+  
+  
+  );
+};
+export default Board; 
